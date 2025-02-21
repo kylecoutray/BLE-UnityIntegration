@@ -1,0 +1,57 @@
+Psychtoolbox-3/
+*.log
+*.bak
+.env
+
+# Unity Generated Files - Ignore Temp and Library Folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+Packages/
+
+# Ignore Visual Studio / JetBrains Rider project files
+.vscode/
+.idea/
+*.sln
+*.csproj
+*.unityproj
+*.suo
+*.tmp
+*.user
+*.booproj
+*.svd
+
+# Ignore OS-specific files (Mac/Windows)
+.DS_Store
+Thumbs.db
+
+# Ignore Cache and Auto-Generated Files
+/Logs/
+*.pidb
+*.pdb
+*.mdb
+*.ilk
+*.aps
+*.ncb
+*.sdf
+*.opendb
+*.VC.db
+
+# Ignore Builds
+/Builds/
+/bin/
+/obj/
+
+# Ignore Play Mode and Editor-only Files
+/MemoryCaptures/
+
+# Ignore Unity Cache
+/Library/ShaderCache/
+.globl.cache
+*.assetbundle
+
+# I
