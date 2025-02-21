@@ -22,7 +22,7 @@ prev_wheel_time = None
 WRITE_OUTPUT = False
 
 #opens our file for writing speed data
-output_file = open("D:\GithubRepos\ANT-UnityIntegration\currentSpeed.txt", "w")
+output_file = open("D:\GithubRepos\BLE-UnityIntegration\currentSpeed.txt", "w")
 
 
 def parse_csc_measurement(data: bytearray):
