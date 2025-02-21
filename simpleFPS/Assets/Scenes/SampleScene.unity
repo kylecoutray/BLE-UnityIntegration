@@ -5779,7 +5779,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  lookSpeed: 2
+  speedFactor: 1
+  interpolationRate: 2
+  decelerationRate: 0.5
+  lookSpeed: 0.5
 --- !u!1 &1873117233
 GameObject:
   m_ObjectHideFlags: 0
