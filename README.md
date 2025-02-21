@@ -1,4 +1,4 @@
-# ANT-UnityIntegration
+# BLE-UnityIntegration
 This project is to connect to a Garmin Speed Sensor 2 through BLE and parse the real time speed from the CSC data stream to manipulate a Unity environment.
 
 I am utilizing the bleak and asyncio library. 
