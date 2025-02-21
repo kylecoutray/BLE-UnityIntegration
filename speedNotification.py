@@ -1,3 +1,4 @@
+import sys
 import asyncio
 from bleak import BleakClient
 
@@ -17,6 +18,12 @@ WHEEL_CIRCUMFERENCE_M = 2.1
 # keep track of the previous measurement for deltas
 prev_wheel_revs = None
 prev_wheel_time = None  
+
+WRITE_OUTPUT = False
+
+#opens our file for writing speed data
+output_file = open("D:\GithubRepos\ANT-UnityIntegration\currentSpeed.txt", "w")
+
 
 def parse_csc_measurement(data: bytearray):
     """
@@ -78,12 +85,24 @@ def notification_handler(sender, data):
                 distance_m = delta_revs * WHEEL_CIRCUMFERENCE_M
                 speed_m_s = distance_m / time_seconds
                 print(f"Speed: {speed_m_s:.2f} m/s")
+                if WRITE_OUTPUT:
+                    output_file.seek(0)  #reset file to overwrite
+                    output_file.write(f"{speed_m_s:.2f}") #writes our speed
+                    output_file.flush()  #write data immediately 
+
 
         # update previous measurement
         prev_wheel_revs = wr
         prev_wheel_time = wt
 
 async def main():
+    global WRITE_OUTPUT
+    #prompt if user wants to write the speed data to file
+    response = input("Would you like to write the speed data to an output file? (y/n): ")
+    
+    #update global var for our if statement inside notification_handler
+    WRITE_OUTPUT = response.strip().lower().startswith('y')
+
     async with BleakClient(DEVICE_ADDRESS) as client:
         await client.start_notify(CSC_MEASUREMENT_UUID, notification_handler)
         print("Subscribed to CSC Measurement notifications. Ctrl+C to stop.")
