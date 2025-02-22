@@ -12,3 +12,8 @@ You must do `pip install bleak` to use bleakScanner
 
 Let me know if you have any issues or questions :)
 
+view the current state here:
+
+[![See the current state here.](https://img.youtube.com/vi/C9kRAWhEDl0/0.jpg)](https://youtu.be/C9kRAWhEDl0)
+
+
