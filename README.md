@@ -13,8 +13,8 @@ You must do `pip install bleak` for the following scripts to run.
 **To run the Unity Scene properly:**
 1) Fix all file paths on local machine
 2) Turn on Speed Sensor 2 (Rotate until lights flash)
-3) Run 'speedNotification.py'
-4) Enter ' "y" ' when prompted
+3) Run `speedNotification.py`
+4) Enter ` "y" ` when prompted
 5) Run Unity simpleBLE "barebones" scene
 
 Control camera with arrow keys, camera will accelerate based on speed sensor.
