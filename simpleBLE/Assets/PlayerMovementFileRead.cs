@@ -5,14 +5,11 @@ using System.IO;
 public class PlayerMovementFileRead : MonoBehaviour
 {   
     // File path to the sensor speed file
-<<<<<<< Updated upstream
-    private string filePath = @"/Users/kyle./Documents/GitHub/BLE-UnityIntegration/currentSpeed.txt";
-=======
     private string filePath = @"D:/GithubRepos/BLE-UnityIntegration/currentSpeed.txt";
 
     //macbook location: "/Users/kyle./Documents/GitHub/BLE-UnityIntegration/currentSpeed.txt"
     //windows location: "D:/GithubRepos/BLE-UnityIntegration/currentSpeed.txt"
->>>>>>> Stashed changes
+
     
     // Movement variables
     public float moveSpeed = 0f;
