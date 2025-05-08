@@ -3,12 +3,12 @@ import asyncio
 import struct
 from bleak import BleakClient
 
-#set the correct BLE device address and characteristic UUID
-DEVICE_ADDRESS = "02:64:5C:8D:B0:56"
-CHAR_UUID = "19B10001-E8F2-537E-4F6C-D104768A1214"
+
+DEVICE_ADDRESS = "DF:5D:38:36:41:CC"
+CHAR_UUID = "00000000-0000-0000-0000-000000000001"
 
 #output file path where the new value overwrites the previous one
-FILE_PATH = r"D:\GithubRepos\BLE-UnityIntegration\currentSpeed.txt"
+FILE_PATH = r"C:/Github/BLE-UnityIntegration/currentSpeed.txt"
 
 def notification_handler(sender, data: bytearray):
     """

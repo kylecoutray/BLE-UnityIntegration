@@ -1,0 +1,21 @@
+Steps to use:
+
+1) run the nanoBLE arduino script
+	- this sets up each arduino nano for broadcasting.
+	- this will be used in the next script. 
+	- make sure to CHANGE NAME in line 24 for left/right
+	
+2) run the bleakScanner.py
+	- search for rightNanoSense and leftNanoSense
+	- make note of their device ID
+
+3) run doubleNanoBLEread.py
+	- this code will read the update from each then
+ 	write it to a file named: currentSpeedLeft.txt 
+	and currentSpeedRight.txt respectively.
+	- IMPORTANT: make sure all the info is input correctly:
+		- left/right nano address
+		- UUID (should be correct if you used the nanoBLE script))
+		- FILE_PATH (left and right) for currentSpeed texts
+
+4) run the Unity Script

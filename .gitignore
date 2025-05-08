@@ -60,3 +60,16 @@ Thumbs.db
 #ignore heavy unity scene
 simpleFPS/
 
+# === Ignore specific Assets subfolders and their metadata ===
+simpleBLE/Assets/ADG_Textures/
+simpleBLE/Assets/ADG_Textures.meta
+simpleBLE/Assets/Fantasy Skybox FREE/
+simpleBLE/Assets/Fantasy Skybox FREE.meta
+simpleBLE/Assets/Polytope Studio/
+simpleBLE/Assets/Polytope Studio.meta
+simpleBLE/Assets/ProBuilder Data/
+simpleBLE/Assets/ProBuilder Data.meta
+simpleBLE/Assets/Tree_Textures/
+simpleBLE/Assets/Tree_Textures.meta
+
+

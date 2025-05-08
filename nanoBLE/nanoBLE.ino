@@ -2,8 +2,9 @@
 #include <Arduino_BMI270_BMM150.h>
 
 //define a custom BLE service UUID and a characteristic UUID.
-BLEService sensorService("19B10000-E8F2-537E-4F6C-D104768A1214");
-BLECharacteristic gyroCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, sizeof(float));
+BLEService sensorService("00000000-0000-0000-0000-000000000000");
+BLECharacteristic gyroCharacteristic("00000000-0000-0000-0000-000000000001", BLERead | BLENotify, sizeof(float));
+
 
 void setup() {
   Serial.begin(9600);
@@ -19,7 +20,12 @@ void setup() {
   }
   
   //set BLE local name and advertise our custom service
-  BLE.setLocalName("NanoSense");
+
+  BLE.setLocalName("rightNanoSense");
+
+  //uncomment this for right arduino
+  //BLE.setLocalName("leftNanoSense");
+
   BLE.setAdvertisedService(sensorService);
   sensorService.addCharacteristic(gyroCharacteristic);
   BLE.addService(sensorService);
